@@ -1,0 +1,13 @@
+version: '3.5'
+services:
+  sentinel:
+    build: sentinel
+    image: sersoong/sentinel:v1.8.3
+    container_name: sentinel
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+        #ES_JAVA_OPTS: "-Xms1g -Xmx1g"
+    ports:
+      - "8061:8080"
+      - "8719:8719"
